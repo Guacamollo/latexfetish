@@ -1,7 +1,6 @@
-# The Latex List
-![Rubber Pride](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Rubber_Fetish_Pride_Flag.svg/512px-Rubber_Fetish_Pride_Flag.svg.png)
+# The Latex List <img src="assets/flags/rubber-pride.svg" alt="" width="80" align="right">
 
-This is an online repository for latex/rubber fetishists, cataloging designers, models etc. This list is *only* for latex/rubber, not PVC or similar materials. 
+This is an online repository for latex/rubber fetishists, cataloging designers, models etc. This list is *only* for latex/rubber, not PVC or similar materials.
 
 If you have additions or corrections/updates feel free to make a pull request. This list is acknowledges the work of (now defunct) latexcouture.esy.es. Additions should:
 - Follow the format of this README
