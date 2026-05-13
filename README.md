@@ -1,11 +1,11 @@
-# The Latex List <img src="assets/flags/rubber-pride.svg" alt="" width="80" align="right">
+# The Latex List <img src="assets/rubber-pride.svg" alt="rubber pride flag" title="Rubber Pride" width="80" align="right">
 
 This is an online repository for latex/rubber fetishists, cataloging designers, models etc. This list is *only* for latex/rubber, not PVC or similar materials.
 
 If you have additions or corrections/updates feel free to make a pull request. This list is acknowledges the work of (now defunct) latexcouture.esy.es. Additions should:
 - Follow the format of this README
 - Only add still active sites/designers/models etc. If you see something in here that has been abandoned/gone out of business etc, please make a pull request.
-- Foucs on quality over quantity
+- Focus on quality over quantity
 
 ## Table of contents
 
@@ -304,3 +304,8 @@ If you have additions or corrections/updates feel free to make a pull request. T
 - **beGLOSS** ([WWW](https://www.begloss.com))
 - **LatexFashionTV** (UK :uk:) ([WWW](https://www.patreon.com/latexfashiontv) )
 - **Vivishine** ([WWW](https://www.vivishine.com))
+
+## Credits
+
+Flag icons are from [Twemoji](https://github.com/twitter/twemoji) by Twitter/X contributors.
+Licensed under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/).
