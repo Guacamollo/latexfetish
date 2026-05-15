@@ -6,7 +6,7 @@
       "links": [
         {
           "platform": "website",
-          "url": "http://www.absolutedanny.com/"
+          "url": "http://www.absolutedanny.com"
         },
         {
           "platform": "facebook",
@@ -28,15 +28,15 @@
         },
         {
           "platform": "instagram",
-          "url": "https://www.instagram.com/honourclothing/"
+          "url": "https://www.instagram.com/honourclothing"
         },
         {
           "platform": "x",
-          "url": "https://twitter.com/honourclothing"
+          "url": "https://x.com/honourclothing"
         },
         {
           "platform": "youtube",
-          "url": "https://www.youtube.com/user/honourclothing/"
+          "url": "https://www.youtube.com/user/honourclothing"
         }
       ]
     },
@@ -66,7 +66,7 @@
       "links": [
         {
           "platform": "website",
-          "url": "https://www.stockroom.com/"
+          "url": "https://www.stockroom.com"
         }
       ]
     }

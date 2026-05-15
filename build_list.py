@@ -10,14 +10,18 @@ Usage:
 
     python build_list.py data/shops.json --sort-json
         # rewrite the JSON file with shops and platforms sorted
-        # shops - alphabetically by country then name
-        # platforms - website first, then alphabetical
+        # and URLs normalized:
+        #   - shops sorted alphabetically by name
+        #   - links sorted website-first, then alphabetical
+        #   - trailing slashes trimmed from URLs
+        #   - twitter.com URLs rewritten to x.com
 
 Missing icon or flag files print a warning to stderr but don't stop the build.
 """
 
 import argparse
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -29,11 +33,14 @@ PLATFORMS = {
     "ebay":       {"alt": "ebay",        "title": "eBay"},
     "etsy":       {"alt": "etsy",        "title": "Etsy"},
     "facebook":   {"alt": "facebook",    "title": "Facebook"},
+    "fetlife":    {"alt": "fetlife",     "title": "FetLife"},
     "fler":       {"alt": "fler",        "title": "Fler"},
     "flickr":     {"alt": "flickr",      "title": "Flickr"},
     "instagram":  {"alt": "instagram",   "title": "Instagram"},
     "kavyar":     {"alt": "kavyar",      "title": "Kavyar"},
+    "linkedin":   {"alt": "linkedin",    "title": "LinkedIn"},
     "pinterest":  {"alt": "pinterest",   "title": "Pinterest"},
+    "tiktok":     {"alt": "tiktok",      "title": "TikTok"},
     "tumblr":     {"alt": "tumblr",      "title": "Tumblr"},
     "website":    {"alt": "website",     "title": "Website"},
     "x":          {"alt": "x (twitter)", "title": "X (Twitter)"},
@@ -65,6 +72,12 @@ COUNTRIES = {
     "us": "United States of America",
 }
 
+# Match twitter.com
+TWITTER_HOST_RE = re.compile(
+    r'^(https?://)(?:www\.|mobile\.)?twitter\.com(?=[/:?#]|$)',
+    re.IGNORECASE,
+)
+
 # Disk paths
 SCRIPT_DIR = Path(__file__).resolve().parent
 ICONS_DIR = SCRIPT_DIR / "assets" / "icons"
@@ -84,6 +97,29 @@ def sort_shops(shops):
 def sort_links(links):
     # "website" always first, the rest alphabetical by platform.
     return sorted(links, key=lambda lk: (0 if lk["platform"] == "website" else 1, lk["platform"]))
+
+# --- URL normalization -------------------------------------------------------
+
+def normalize_url(url):
+    """Rewrite twitter.com to x.com and trim trailing slashes."""
+    new_url = TWITTER_HOST_RE.sub(r'\1x.com', url)
+    new_url = new_url.rstrip("/")
+    return new_url
+
+
+def clean_urls(shops):
+    """Apply normalize_url to every link in place. Returns the count of URLs changed."""
+    changes = 0
+    for shop in shops:
+        for link in shop["links"]:
+            original = link.get("url")
+            if not original:
+                continue
+            cleaned = normalize_url(original)
+            if cleaned != original:
+                link["url"] = cleaned
+                changes += 1
+    return changes
 
 # --- Rendering ---------------------------------------------------------------
 
@@ -171,7 +207,7 @@ def parse_args(argv=None):
     parser = argparse.ArgumentParser(description="Generate the shop link list for a README from a shops JSON file.")
     parser.add_argument("json_path", help="Path to the shops JSON file.")
     parser.add_argument("-o", "--output", help="Write rendered markdown to this file instead of stdout. Cannot be combined with --sort-json.")
-    parser.add_argument("--sort-json", action="store_true", help="Rewrite the JSON file in place with shops sorted by name and links website-first. No markdown is produced.")
+    parser.add_argument("--sort-json", action="store_true", help="Rewrite the JSON file in place with shops sorted by name, links website-first, trailing slashes trimmed from URLs, and twitter.com URLs rewritten to x.com. No markdown is produced.")
     args = parser.parse_args(argv)
 
     if args.sort_json and args.output:
@@ -197,6 +233,7 @@ def main(argv=None):
         sys.exit(1)
 
     if args.sort_json:
+        url_changes = clean_urls(shops)
         # JSON file is sorted by shop name only
         sorted_shops = sorted(shops, key=lambda s: s["name"].lower())
         for shop in sorted_shops:
@@ -209,7 +246,8 @@ def main(argv=None):
         json_path.write_text(
             json.dumps(payload, indent=2, ensure_ascii=False) + "\n",
             encoding="utf-8")
-        print(f"{json_path.name} sorted (shops by name, links website-first).")
+        extra = f", normalized {url_changes} URL(s)" if url_changes else ""
+        print(f"{json_path.name} sorted (shops by name, links website-first){extra}.")
         return
 
     rendered = render_all(shops)
