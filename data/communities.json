@@ -1,0 +1,34 @@
+{
+  "communities": [
+    {
+      "name": "Darkside",
+      "country": "se",
+      "links": [
+        {
+          "platform": "website",
+          "url": "http://darkside.se"
+        }
+      ]
+    },
+    {
+      "name": "FetLife",
+      "country": "ca",
+      "links": [
+        {
+          "platform": "website",
+          "url": "http://fetlife.com"
+        }
+      ]
+    },
+    {
+      "name": "JOYclub",
+      "country": "de",
+      "links": [
+        {
+          "platform": "website",
+          "url": "https://www.joyclub.com"
+        }
+      ]
+    }
+  ]
+}

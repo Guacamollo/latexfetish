@@ -1,0 +1,74 @@
+{
+  "shops": [
+    {
+      "name": "Absolute Danny",
+      "country": "nl",
+      "links": [
+        {
+          "platform": "website",
+          "url": "http://www.absolutedanny.com/"
+        },
+        {
+          "platform": "facebook",
+          "url": "https://www.facebook.com/pg/Absolute-Danny-388274791324944"
+        }
+      ]
+    },
+    {
+      "name": "Honour",
+      "country": "gb",
+      "links": [
+        {
+          "platform": "website",
+          "url": "https://www.honour.co.uk"
+        },
+        {
+          "platform": "facebook",
+          "url": "https://www.facebook.com/honourclothing01"
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/honourclothing/"
+        },
+        {
+          "platform": "x",
+          "url": "https://twitter.com/honourclothing"
+        },
+        {
+          "platform": "youtube",
+          "url": "https://www.youtube.com/user/honourclothing/"
+        }
+      ]
+    },
+    {
+      "name": "Rubber Eva",
+      "country": "gb",
+      "links": [
+        {
+          "platform": "website",
+          "url": "https://www.rubberevashop.com"
+        }
+      ]
+    },
+    {
+      "name": "RubberFashion",
+      "country": "de",
+      "links": [
+        {
+          "platform": "website",
+          "url": "https://www.rubberfashion.de"
+        }
+      ]
+    },
+    {
+      "name": "Stockroom",
+      "country": "us",
+      "links": [
+        {
+          "platform": "website",
+          "url": "https://www.stockroom.com/"
+        }
+      ]
+    }
+  ]
+}
