@@ -1,0 +1,35 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65 65">
+<style type="text/css">
+	.st0{fill:#F1F1F1;}
+</style>
+	<rect x="0" y="0" width="65" height="65" fill="#FF0000"/>
+	<g transform="translate(-12.85 -8.6)">
+		<rect x="25.5" y="17" class="st0" width="5.7" height="5.7"/>
+		<rect x="34" y="17" class="st0" width="5.7" height="5.7"/>
+		<rect x="51" y="17" class="st0" width="5.7" height="5.7"/>
+		<rect x="59.5" y="17" class="st0" width="5.7" height="5.7"/>
+		<rect x="17" y="25.5" class="st0" width="5.7" height="5.7"/>
+		<rect x="25.5" y="25.5" class="st0" width="5.7" height="5.7"/>
+		<rect x="34" y="25.5" class="st0" width="5.7" height="5.7"/>
+		<rect x="42.5" y="25.5" class="st0" width="5.7" height="5.7"/>
+		<rect x="51" y="25.5" class="st0" width="5.7" height="5.7"/>
+		<rect x="59.5" y="25.5" class="st0" width="5.7" height="5.7"/>
+		<rect x="68" y="25.5" class="st0" width="5.7" height="5.7"/>
+		<rect x="17" y="34" class="st0" width="5.7" height="5.7"/>
+		<rect x="25.5" y="34" class="st0" width="5.7" height="5.7"/>
+		<rect x="34" y="34" class="st0" width="5.7" height="5.7"/>
+		<rect x="42.5" y="34" class="st0" width="5.7" height="5.7"/>
+		<rect x="51" y="34" class="st0" width="5.7" height="5.7"/>
+		<rect x="59.5" y="34" class="st0" width="5.7" height="5.7"/>
+		<rect x="68" y="34" class="st0" width="5.7" height="5.7"/>
+		<rect x="25.5" y="42.5" class="st0" width="5.7" height="5.7"/>
+		<rect x="34" y="42.5" class="st0" width="5.7" height="5.7"/>
+		<rect x="42.5" y="42.5" class="st0" width="5.7" height="5.7"/>
+		<rect x="51" y="42.5" class="st0" width="5.7" height="5.7"/>
+		<rect x="59.5" y="42.5" class="st0" width="5.7" height="5.7"/>
+		<rect x="34" y="51" class="st0" width="5.7" height="5.7"/>
+		<rect x="42.5" y="51" class="st0" width="5.7" height="5.7"/>
+		<rect x="51" y="51" class="st0" width="5.7" height="5.7"/>
+		<rect x="42.5" y="59.5" class="st0" width="5.7" height="5.7"/>
+	</g>
+</svg>
