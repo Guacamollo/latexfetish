@@ -16,7 +16,8 @@ Usage:
         #   - trailing slashes trimmed from URLs
         #   - twitter.com URLs rewritten to x.com
 
-Missing icon or flag files print a warning to stderr but don't stop the build.
+Icon and flag lookup prefers .svg and falls back to .png. Missing files
+print a warning to stderr but don't stop the build.
 """
 
 import argparse
@@ -28,24 +29,34 @@ from pathlib import Path
 # --- Configuration -----------------------------------------------------------
 
 PLATFORMS = {
-    "behance":    {"alt": "behance",     "title": "Behance"},
-    "deviantart": {"alt": "deviantart",  "title": "DeviantArt"},
-    "ebay":       {"alt": "ebay",        "title": "eBay"},
-    "etsy":       {"alt": "etsy",        "title": "Etsy"},
-    "facebook":   {"alt": "facebook",    "title": "Facebook"},
-    "fetlife":    {"alt": "fetlife",     "title": "FetLife"},
-    "fler":       {"alt": "fler",        "title": "Fler"},
-    "flickr":     {"alt": "flickr",      "title": "Flickr"},
-    "instagram":  {"alt": "instagram",   "title": "Instagram"},
-    "joyclub":    {"alt": "joyclub",     "title": "JoyClub"},
-    "kavyar":     {"alt": "kavyar",      "title": "Kavyar"},
-    "linkedin":   {"alt": "linkedin",    "title": "LinkedIn"},
-    "pinterest":  {"alt": "pinterest",   "title": "Pinterest"},
-    "tiktok":     {"alt": "tiktok",      "title": "TikTok"},
-    "tumblr":     {"alt": "tumblr",      "title": "Tumblr"},
-    "website":    {"alt": "website",     "title": "Website"},
-    "x":          {"alt": "x (twitter)", "title": "X (Twitter)"},
-    "youtube":    {"alt": "youtube",     "title": "YouTube"},
+    "24vids":                    {"alt": "24vids",                  "title": "24vids"},
+    "behance":                   {"alt": "behance",                 "title": "Behance"},
+    "bluesky":                   {"alt": "bluesky",                 "title": "Bluesky"},
+    "deviantart":                {"alt": "deviantart",              "title": "DeviantArt"},
+    "ebay":                      {"alt": "ebay",                    "title": "eBay"},
+    "etsy":                      {"alt": "etsy",                    "title": "Etsy"},
+    "facebook":                  {"alt": "facebook",                "title": "Facebook"},
+    "fetish-x":                  {"alt": "fetish-x",                "title": "fetish-x"},
+    "fetlife":                   {"alt": "fetlife",                 "title": "FetLife"},
+    "fler":                      {"alt": "fler",                    "title": "Fler"},
+    "flickr":                    {"alt": "flickr",                  "title": "Flickr"},
+    "instagram":                 {"alt": "instagram",               "title": "Instagram"},
+    "joyclub":                   {"alt": "joyclub",                 "title": "JoyClub"},
+    "kavyar":                    {"alt": "kavyar",                  "title": "Kavyar"},
+    "latex247":                  {"alt": "latex247",                "title": "Latex 24/7"},
+    "latexvideos":               {"alt": "latexvideos",             "title": "Latex Videos"},
+    "latexzentrale":             {"alt": "latexzentrale",           "title": "LatexZentrale"},
+    "linkedin":                  {"alt": "linkedin",                "title": "LinkedIn"},
+    "model-kartei":              {"alt": "model-kartei",            "title": "Model-Kartei"},
+    "pinterest":                 {"alt": "pinterest",               "title": "Pinterest"},
+    "thefetishistasdirectory":   {"alt": "thefetishistasdirectory", "title": "The Fetishistas Directory"},
+    "threads":                   {"alt": "threads",                 "title": "Threads"},
+    "tiktok":                    {"alt": "tiktok",                  "title": "TikTok"},
+    "tumblr":                    {"alt": "tumblr",                  "title": "Tumblr"},
+    "wearlatex":                 {"alt": "wearlatex",               "title": "WearLatex"},
+    "website":                   {"alt": "website",                 "title": "Website"},
+    "x":                         {"alt": "x (twitter)",             "title": "X (Twitter)"},
+    "youtube":                   {"alt": "youtube",                 "title": "YouTube"},
 }
 
 COUNTRIES = {
@@ -87,6 +98,18 @@ FLAGS_DIR = SCRIPT_DIR / "assets" / "flags"
 # URL paths
 ICONS_URL = "../assets/icons"
 FLAGS_URL = "../assets/flags"
+
+# Asset extensions to try, in order of preference.
+ASSET_EXTENSIONS = (".svg", ".png")
+
+# --- Asset resolution --------------------------------------------------------
+
+def resolve_asset(directory, stem):
+    for ext in ASSET_EXTENSIONS:
+        candidate = f"{stem}{ext}"
+        if (directory / candidate).exists():
+            return candidate, True
+    return f"{stem}{ASSET_EXTENSIONS[0]}", False
 
 # --- Sorting -----------------------------------------------------------------
 
@@ -130,8 +153,19 @@ def clean_urls(shops):
 
 # --- Rendering ---------------------------------------------------------------
 
+def icon_stem(platform):
+    meta = PLATFORMS[platform]
+    return Path(meta.get("icon", platform)).stem
+
+
 def icon_filename(platform):
-    return PLATFORMS[platform].get("icon", f"{platform}.svg")
+    filename, _ = resolve_asset(ICONS_DIR, icon_stem(platform))
+    return filename
+
+
+def flag_filename(country):
+    filename, _ = resolve_asset(FLAGS_DIR, country)
+    return filename
 
 
 def render_icon(platform):
@@ -148,7 +182,7 @@ def render_link(link):
 
 
 def render_flag(country):
-    src = f'{FLAGS_URL}/{country}.svg'
+    src = f'{FLAGS_URL}/{flag_filename(country)}'
     return (f'<img src="{src}" width="20" '
             f'alt="{country.upper()}" title="{COUNTRIES[country]}">')
 
@@ -168,14 +202,17 @@ def render_all(shops):
 
 def validate(shops):
     errors, warnings = [], []
+    tried = " or ".join(ext.lstrip(".") for ext in ASSET_EXTENSIONS)
     for shop in shops:
         where = shop.get("name", "<unnamed shop>")
         country = shop.get("country")
         if country is not None:
             if country not in COUNTRIES:
                 errors.append(f'{where}: unknown country "{country}"')
-            elif not (FLAGS_DIR / f"{country}.svg").exists():
-                warnings.append(f'{where}: missing flag file {country}.svg')
+            else:
+                _, found = resolve_asset(FLAGS_DIR, country)
+                if not found:
+                    warnings.append(f'{where}: missing flag file for "{country}" (tried {tried})')
         for link in shop["links"]:
             platform = link.get("platform")
             if platform not in PLATFORMS:
@@ -183,9 +220,9 @@ def validate(shops):
                 continue
             if "url" not in link:
                 errors.append(f'{where} ({platform}): missing "url"')
-            if not (ICONS_DIR / icon_filename(platform)).exists():
-                warnings.append(f'{where}: missing icon file '
-                                f'{icon_filename(platform)}')
+            _, found = resolve_asset(ICONS_DIR, icon_stem(platform))
+            if not found:
+                warnings.append(f'{where}: missing icon file for "{platform}" (tried {tried})')
     return errors, warnings
 
 # --- JSON loading ------------------------------------------------------------
