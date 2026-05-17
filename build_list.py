@@ -37,6 +37,7 @@ PLATFORMS = {
     "fler":       {"alt": "fler",        "title": "Fler"},
     "flickr":     {"alt": "flickr",      "title": "Flickr"},
     "instagram":  {"alt": "instagram",   "title": "Instagram"},
+    "joyclub":    {"alt": "joyclub",     "title": "JoyClub"},
     "kavyar":     {"alt": "kavyar",      "title": "Kavyar"},
     "linkedin":   {"alt": "linkedin",    "title": "LinkedIn"},
     "pinterest":  {"alt": "pinterest",   "title": "Pinterest"},
@@ -84,14 +85,20 @@ ICONS_DIR = SCRIPT_DIR / "assets" / "icons"
 FLAGS_DIR = SCRIPT_DIR / "assets" / "flags"
 
 # URL paths
-ICONS_URL = "assets/icons"
-FLAGS_URL = "assets/flags"
+ICONS_URL = "../assets/icons"
+FLAGS_URL = "../assets/flags"
 
 # --- Sorting -----------------------------------------------------------------
 
 def sort_shops(shops):
-    # By country name, then shop name.
-    return sorted(shops, key=lambda s: (COUNTRIES[s["country"]], s["name"].lower()))
+    # Shops with a country first (by country name, then shop name),
+    # then shops without a country (by shop name).
+    def key(s):
+        country = s.get("country")
+        if country:
+            return (0, COUNTRIES[country], s["name"].lower())
+        return (1, "", s["name"].lower())
+    return sorted(shops, key=key)
 
 
 def sort_links(links):
@@ -148,7 +155,10 @@ def render_flag(country):
 
 def render_shop(shop):
     links = " ".join(render_link(lk) for lk in sort_links(shop["links"]))
-    return f'- {render_flag(shop["country"])} **{shop["name"]}** {links}'
+    country = shop.get("country")
+    if country:
+        return f'- {render_flag(country)} **{shop["name"]}** {links}'
+    return f'- **{shop["name"]}** {links}'
 
 
 def render_all(shops):
@@ -161,10 +171,11 @@ def validate(shops):
     for shop in shops:
         where = shop.get("name", "<unnamed shop>")
         country = shop.get("country")
-        if country not in COUNTRIES:
-            errors.append(f'{where}: unknown country "{country}"')
-        elif not (FLAGS_DIR / f"{country}.svg").exists():
-            warnings.append(f'{where}: missing flag file {country}.svg')
+        if country is not None:
+            if country not in COUNTRIES:
+                errors.append(f'{where}: unknown country "{country}"')
+            elif not (FLAGS_DIR / f"{country}.svg").exists():
+                warnings.append(f'{where}: missing flag file {country}.svg')
         for link in shop["links"]:
             platform = link.get("platform")
             if platform not in PLATFORMS:

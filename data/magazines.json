@@ -1,0 +1,145 @@
+{
+  "magazines": [
+    {
+      "name": "Bedesme Magazine",
+      "links": [
+        {
+          "platform": "website",
+          "url": "https://bedeseme.com"
+        },
+        {
+          "platform": "facebook",
+          "url": "https://www.facebook.com/Bedeseme"
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/bedeseme"
+        },
+        {
+          "platform": "x",
+          "url": "https://x.com/Bedeseme"
+        },
+        {
+          "platform": "youtube",
+          "url": "https://www.youtube.com/channel/UCCYrvQfpNBJQGNhQQ6gMmRQ"
+        }
+      ]
+    },
+    {
+      "name": "Goliath Books",
+      "country": "de",
+      "links": [
+        {
+          "platform": "website",
+          "url": "https://www.goliathbooks.com"
+        }
+      ]
+    },
+    {
+      "name": "Kultur Mag",
+      "links": [
+        {
+          "platform": "website",
+          "url": "https://kulturmagazine.magcloud.com"
+        },
+        {
+          "platform": "facebook",
+          "url": "https://www.facebook.com/KulturMag"
+        }
+      ]
+    },
+    {
+      "name": "Latecstasy",
+      "links": [
+        {
+          "platform": "website",
+          "url": "https://bedeseme.com/latecstasy-issues"
+        }
+      ]
+    },
+    {
+      "name": "Latex 24/7",
+      "country": "gb",
+      "links": [
+        {
+          "platform": "website",
+          "url": "https://www.latex247.co.uk"
+        },
+        {
+          "platform": "facebook",
+          "url": "https://www.facebook.com/latex247"
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/latex247"
+        }
+      ]
+    },
+    {
+      "name": "LTX Magazine",
+      "links": [
+        {
+          "platform": "website",
+          "url": "https://ltxmagazine1.wixsite.com/ltxmag"
+        },
+        {
+          "platform": "facebook",
+          "url": "https://www.facebook.com/ltxmag"
+        }
+      ]
+    },
+    {
+      "name": "Rubber Life",
+      "type": "book",
+      "links": [
+        {
+          "platform": "website",
+          "url": "http://www.rubberlife.com"
+        }
+      ]
+    },
+    {
+      "name": "Skin Two Magazine",
+      "links": [
+        {
+          "platform": "website",
+          "url": "https://www.skintwo.com/sk2-magazine"
+        }
+      ]
+    },
+    {
+      "name": "The Fetishistas",
+      "links": [
+        {
+          "platform": "website",
+          "url": "https://thefetishistas.com"
+        }
+      ]
+    },
+    {
+      "name": "Von Gutenberg",
+      "links": [
+        {
+          "platform": "website",
+          "url": "https://www.vongutenberg.com"
+        },
+        {
+          "platform": "facebook",
+          "url": "https://www.facebook.com/vongutenbergmagazine"
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/vongutenberg_magazine"
+        },
+        {
+          "platform": "x",
+          "url": "https://x.com/vongutenbergmag"
+        },
+        {
+          "platform": "youtube",
+          "url": "https://www.youtube.com/user/ErikvonGutenberg/videos"
+        }
+      ]
+    }
+  ]
+}
