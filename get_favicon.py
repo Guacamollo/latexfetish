@@ -8,8 +8,8 @@ Strategy:
   3. Fall back to <scheme>://<host>/favicon.ico
   4. Save as PNG; SVGs pass through unchanged
 
-Requires: requests, beautifulsoup4, Pillow, tldextract
-    pip install requests beautifulsoup4 Pillow tldextract
+Requires: curl_cffi, beautifulsoup4, Pillow, tldextract
+    pip install curl_cffi beautifulsoup4 Pillow tldextract
 """
 
 import argparse
@@ -18,12 +18,12 @@ import sys
 from pathlib import Path
 from urllib.parse import urljoin, urlparse
 
-import requests
 import tldextract
 from bs4 import BeautifulSoup
+from curl_cffi import requests
 from PIL import Image
 
-HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; FaviconFetcher/1.0)"}
+IMPERSONATE = "chrome133"
 
 ICON_RELS = {
     "icon",
@@ -59,9 +59,14 @@ def _clean_filename(netloc: str) -> str:
 def find_icon_candidates(page_url: str) -> list[str]:
     """Return absolute icon URLs found in page, best first."""
     try:
-        resp = requests.get(page_url, headers=HEADERS, timeout=10, allow_redirects=True)
+        resp = requests.get(
+            page_url,
+            timeout=10,
+            allow_redirects=True,
+            impersonate=IMPERSONATE,
+        )
         resp.raise_for_status()
-    except requests.RequestException as e:
+    except Exception as e:
         print(f"Warning: could not fetch page ({e}); falling back to /favicon.ico",
               file=sys.stderr)
         return []
@@ -127,16 +132,33 @@ def download_favicon(page_url: str, out_dir: str = ".") -> Path | None:
     if root_fallback not in candidates:
         candidates.append(root_fallback)
 
+    host = parsed.netloc
+    candidates.append(f"https://www.google.com/s2/favicons?domain={host}&sz=128")
+    candidates.append(f"https://icons.duckduckgo.com/ip3/{host}.ico")
+
     name = _clean_filename(parsed.netloc)
 
     for url in candidates:
         try:
-            resp = requests.get(url, headers=HEADERS, timeout=10, allow_redirects=True)
-        except requests.RequestException:
+            resp = requests.get(
+                url,
+                timeout=10,
+                allow_redirects=True,
+                impersonate=IMPERSONATE,
+            )
+        except Exception as e:
+            print(f"  {url}: request failed ({e})", file=sys.stderr)
             continue
-        if resp.status_code != 200 or not resp.content:
+        if resp.status_code != 200:
+            print(f"  {url}: HTTP {resp.status_code}", file=sys.stderr)
             continue
-        if "html" in resp.headers.get("Content-Type", "").lower():
+        if not resp.content:
+            print(f"  {url}: empty response body", file=sys.stderr)
+            continue
+        ctype = resp.headers.get("Content-Type", "").lower()
+        if "html" in ctype:
+            print(f"  {url}: skipped (Content-Type {ctype!r} looks like an HTML error page)",
+                  file=sys.stderr)
             continue
 
         content = resp.content
@@ -146,7 +168,7 @@ def download_favicon(page_url: str, out_dir: str = ".") -> Path | None:
             else:
                 data, ext = _to_png(content), ".png"
         except Exception as e:
-            print(f"Skipping {url}: could not decode ({e})", file=sys.stderr)
+            print(f"  {url}: could not decode ({e})", file=sys.stderr)
             continue
 
         filename = Path(out_dir) / f"{name}{ext}"
