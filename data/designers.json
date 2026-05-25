@@ -732,12 +732,24 @@
           "url": "https://cathouseclothing.com"
         },
         {
+          "platform": "etsy",
+          "url": "https://www.etsy.com/uk/shop/cathouseclothing"
+        },
+        {
           "platform": "facebook",
           "url": "https://www.facebook.com/pg/cathouseclothing"
         },
         {
           "platform": "instagram",
           "url": "https://www.instagram.com/cathouseclothing"
+        },
+        {
+          "platform": "latex247",
+          "url": "https://www.latex247.co.uk/latex-directory/cathouse-clothing"
+        },
+        {
+          "platform": "tiktok",
+          "url": "https://www.tiktok.com/@cathouseclothing"
         },
         {
           "platform": "x",
@@ -752,6 +764,22 @@
         {
           "platform": "facebook",
           "url": "https://www.facebook.com/pg/CatrionaStewartClothing"
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/catrionastewartlatex"
+        },
+        {
+          "platform": "peopleperhour",
+          "url": "https://www.peopleperhour.com/freelancer/design/catriona-stewart-latex-clothing-pattern-creator-wmnawmj"
+        },
+        {
+          "platform": "purpleport",
+          "url": "https://purpleport.com/portfolio/catrionastewartlatexdesigner"
+        },
+        {
+          "platform": "youtube",
+          "url": "https://www.youtube.com/@catrionastewart8646"
         }
       ]
     },
@@ -760,8 +788,26 @@
       "country": "gb",
       "links": [
         {
+          "platform": "website",
+          "url": "http://www.cherrypoplatex.com",
+          "label": "Dead"
+        },
+        {
+          "platform": "etsy",
+          "url": "https://www.etsy.com/shop/CherryPopLatex",
+          "label": "Empty"
+        },
+        {
           "platform": "facebook",
           "url": "https://www.facebook.com/pg/cherrypoplatex"
+        },
+        {
+          "platform": "tumblr",
+          "url": "https://www.tumblr.com/cherrypoplatex-blog"
+        },
+        {
+          "platform": "youtube",
+          "url": "https://www.youtube.com/channel/UC4QR-i-b-bFJPjzrTLZR0Ew"
         }
       ]
     },
@@ -774,6 +820,11 @@
           "url": "https://www.chronomatic.de"
         },
         {
+          "platform": "etsy",
+          "url": "https://www.etsy.com/shop/ChronomaticLatex",
+          "label": "Empty"
+        },
+        {
           "platform": "facebook",
           "url": "https://www.facebook.com/pg/chronomatic.latexwear"
         },
@@ -782,8 +833,30 @@
           "url": "https://www.instagram.com/chronomatic_latex"
         },
         {
+          "platform": "latex247",
+          "url": "https://www.latex247.co.uk/latex-directory/chronomatic-luxury-latex-wear"
+        },
+        {
+          "platform": "thefetishistasdirectory",
+          "url": "https://thefetishistasdirectory.com/city/berlin/latexclothing/chronomatic-luxury-latex-wear"
+        },
+        {
+          "platform": "tiktok",
+          "url": "https://www.tiktok.com/@chronobabes",
+          "label": "Old"
+        },
+        {
+          "platform": "tiktok",
+          "url": "https://www.tiktok.com/@chronomatic_latex",
+          "label": "New"
+        },
+        {
           "platform": "x",
           "url": "https://x.com/chronomaticinfo"
+        },
+        {
+          "platform": "youtube",
+          "url": "https://www.youtube.com/@chronomatic_latex"
         }
       ]
     },
@@ -796,12 +869,28 @@
           "url": "https://www.cldesign-latex.de"
         },
         {
+          "platform": "etsy",
+          "url": "https://www.etsy.com/shop/CLDesignLatex"
+        },
+        {
           "platform": "facebook",
           "url": "https://www.facebook.com/CLDesignLatex"
         },
         {
           "platform": "instagram",
           "url": "https://www.instagram.com/cl_design_latex"
+        },
+        {
+          "platform": "latex247",
+          "url": "https://www.latex247.co.uk/latex-directory/cl-design-latex"
+        },
+        {
+          "platform": "latexzentrale",
+          "url": "https://www.latexzentrale.com/index.php/community/linkliste.html?ac=show_link&catid=21&childid=1&linkid=198"
+        },
+        {
+          "platform": "x",
+          "url": "https://x.com/ClLatex"
         }
       ]
     },
@@ -811,11 +900,25 @@
       "links": [
         {
           "platform": "website",
-          "url": "https://cocolatex.patternbyetsy.com"
+          "url": "https://coco-latex.com",
+          "label": "New"
+        },
+        {
+          "platform": "website",
+          "url": "https://cocolatex.patternbyetsy.com",
+          "label": "Old"
+        },
+        {
+          "platform": "etsy",
+          "url": "https://www.etsy.com/shop/CocoLatex"
         },
         {
           "platform": "facebook",
           "url": "https://www.facebook.com/pg/coco.latex.madrid"
+        },
+        {
+          "platform": "tumblr",
+          "url": "https://www.tumblr.com/cocolate-luxurylatex"
         }
       ]
     },
@@ -825,7 +928,17 @@
       "links": [
         {
           "platform": "website",
-          "url": "http://www.cocoon1.com"
+          "url": "http://www.cocoon1.com",
+          "label": "Dead"
+        },
+        {
+          "platform": "facebook",
+          "url": "https://www.facebook.com/people/Cocoon1/100054456011118",
+          "label": "Dead"
+        },
+        {
+          "platform": "thefetishistasdirectory",
+          "url": "https://thefetishistasdirectory.com/city/kidderminster/latexclothing/cocoon"
         }
       ]
     },
@@ -833,6 +946,11 @@
       "name": "Collective Chaos",
       "country": "us",
       "links": [
+        {
+          "platform": "website",
+          "url": "http://www.chaoslatex.com",
+          "label": "Dead"
+        },
         {
           "platform": "etsy",
           "url": "https://www.etsy.com/shop/collectivechaos"
@@ -844,6 +962,23 @@
         {
           "platform": "instagram",
           "url": "https://www.instagram.com/collectivechaos"
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/collectivechaos"
+        },
+        {
+          "platform": "latex247",
+          "url": "https://www.latex247.co.uk/latex-directory/collective-chaos-latex"
+        },
+        {
+          "platform": "thefetishistasdirectory",
+          "url": "https://thefetishistasdirectory.com/city/philadelphia/latexclothing/collective-chaos"
+        },
+        {
+          "platform": "x",
+          "url": "https://x.com/collectivechaos",
+          "label": "Empty"
         }
       ]
     },
@@ -853,11 +988,13 @@
       "links": [
         {
           "platform": "etsy",
-          "url": "https://www.etsy.com/shop/CorsetteLatex"
+          "url": "https://www.etsy.com/shop/CorsetteLatex",
+          "label": "Dead"
         },
         {
           "platform": "facebook",
-          "url": "https://www.facebook.com/pg/Corsettepl"
+          "url": "https://www.facebook.com/pg/Corsettepl",
+          "label": "Dead"
         }
       ]
     },
@@ -870,8 +1007,34 @@
           "url": "http://www.danny-deluxe.com"
         },
         {
+          "platform": "website",
+          "url": "https://www.dannydeluxe.com"
+        },
+        {
+          "platform": "website",
+          "url": "http://www.dannydeluxecouture.com",
+          "label": "Old"
+        },
+        {
           "platform": "facebook",
           "url": "https://www.facebook.com/DannyDeluxeLatex"
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/dannydeluxe"
+        },
+        {
+          "platform": "pinterest",
+          "url": "https://www.pinterest.com/dannydeluxemunc"
+        },
+        {
+          "platform": "tumblr",
+          "url": "https://danny-deluxe-blog.tumblr.com"
+        },
+        {
+          "platform": "x",
+          "url": "https://x.com/deluxelatex",
+          "label": "Empty"
         }
       ]
     },
@@ -885,11 +1048,44 @@
         },
         {
           "platform": "etsy",
+          "url": "https://www.etsy.com/shop/DarkVirtueDesigns",
+          "label": "Empty"
+        },
+        {
+          "platform": "etsy",
           "url": "https://www.etsy.com/shop/DarkVirtueDesigns"
         },
         {
           "platform": "facebook",
           "url": "https://www.facebook.com/darkvirtuedesigns"
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/darkvirtuedesigns"
+        },
+        {
+          "platform": "kavyar",
+          "url": "https://kavyar.com/pgkjsy8hlm98"
+        },
+        {
+          "platform": "latex247",
+          "url": "https://www.latex247.co.uk/latex-directory/dark-virtue-designs"
+        },
+        {
+          "platform": "pinterest",
+          "url": "https://www.pinterest.com/darkvirtuedesigns"
+        },
+        {
+          "platform": "shop",
+          "url": "https://shop.app/m/v3etn457w6"
+        },
+        {
+          "platform": "tiktok",
+          "url": "https://www.tiktok.com/@darkvirtuedesigns"
+        },
+        {
+          "platform": "x",
+          "url": "https://x.com/darkvirtues"
         }
       ]
     },
@@ -902,12 +1098,21 @@
           "url": "https://dawnamatrix.com"
         },
         {
+          "platform": "etsy",
+          "url": "https://www.etsy.com/shop/DawnamatrixDesigns",
+          "label": "Empty"
+        },
+        {
           "platform": "facebook",
           "url": "https://www.facebook.com/DawnamatrixDesigns"
         },
         {
           "platform": "instagram",
           "url": "https://www.instagram.com/dawnamatrix"
+        },
+        {
+          "platform": "latex247",
+          "url": "https://www.latex247.co.uk/latex-directory/dawnamatrix"
         },
         {
           "platform": "x",
@@ -924,12 +1129,25 @@
           "url": "https://dazzleddesignslatex.com"
         },
         {
+          "platform": "etsy",
+          "url": "https://www.etsy.com/shop/DazzledDesignsLatex",
+          "label": "Empty"
+        },
+        {
           "platform": "facebook",
           "url": "https://www.facebook.com/pg/DazzledDesignsLatex"
         },
         {
           "platform": "instagram",
           "url": "https://www.instagram.com/dazzleddesignslatex"
+        },
+        {
+          "platform": "latex247",
+          "url": "https://www.latex247.co.uk/latex-directory/dazzled-designs-latex"
+        },
+        {
+          "platform": "thefetishistasdirectory",
+          "url": "https://thefetishistasdirectory.com/city/amsterdam/latexclothing/dazzled-designs-latex"
         }
       ]
     },
@@ -942,8 +1160,24 @@
           "url": "https://www.deadlotuscouture.com"
         },
         {
+          "platform": "etsy",
+          "url": "https://www.etsy.com/shop/DeadLotusCouture"
+        },
+        {
           "platform": "facebook",
           "url": "https://www.facebook.com/DeadLotusCouture"
+        },
+        {
+          "platform": "latex247",
+          "url": "https://www.latex247.co.uk/latex-directory/dead-lotus-couture"
+        },
+        {
+          "platform": "shop",
+          "url": "https://shop.app/m/76nwakpv2m"
+        },
+        {
+          "platform": "thefetishistasdirectory",
+          "url": "https://thefetishistasdirectory.com/city/london/latexclothing/dead-lotus-couture"
         },
         {
           "platform": "youtube",
@@ -961,19 +1195,54 @@
         },
         {
           "platform": "facebook",
-          "url": "https://www.facebook.com/DemaskAmsterdam"
+          "url": "https://www.facebook.com/DemaskAmsterdam",
+          "label": "Old"
+        },
+        {
+          "platform": "facebook",
+          "url": "https://www.facebook.com/DeMasK.officialpage",
+          "label": "New"
         },
         {
           "platform": "instagram",
-          "url": "https://www.instagram.com/demask_international"
+          "url": "https://www.instagram.com/demask_international",
+          "label": "Old"
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/demask_officialpage",
+          "label": "New"
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/demask_berlin",
+          "label": "Berlin"
+        },
+        {
+          "platform": "latex247",
+          "url": "https://www.latex247.co.uk/latex-directory/demask-berlin"
+        },
+        {
+          "platform": "latexzentrale",
+          "url": "https://www.latexzentrale.com/Demask"
         },
         {
           "platform": "x",
           "url": "https://x.com/DeMasK"
         },
         {
+          "platform": "x",
+          "url": "https://x.com/BerlinDemask",
+          "label": "Berlin"
+        },
+        {
           "platform": "youtube",
           "url": "https://www.youtube.com/user/demaskinternational"
+        },
+        {
+          "platform": "youtube",
+          "url": "https://www.youtube.com/@demasklatex8047",
+          "label": "Berlin"
         }
       ]
     },
@@ -982,12 +1251,29 @@
       "country": "us",
       "links": [
         {
+          "platform": "website",
+          "url": "https://dollskindesigns.wordpress.com"
+        },
+        {
           "platform": "etsy",
-          "url": "https://www.etsy.com/shop/dollskindesignslatex"
+          "url": "https://www.etsy.com/shop/dollskindesignslatex",
+          "label": "Empty"
         },
         {
           "platform": "facebook",
           "url": "https://www.facebook.com/pg/DollskinDesignsLatex"
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/zamra_dollskin"
+        },
+        {
+          "platform": "modelmayhem",
+          "url": "https://www.modelmayhem.com/Zamra"
+        },
+        {
+          "platform": "thefetishistasdirectory",
+          "url": "https://thefetishistasdirectory.com/city/dallas/latexclothing/dollskin-designs"
         }
       ]
     },
@@ -1000,12 +1286,29 @@
           "url": "http://www.ectomorph.com"
         },
         {
+          "platform": "etsy",
+          "url": "https://www.etsy.com/shop/ectomorph",
+          "label": "Empty"
+        },
+        {
           "platform": "facebook",
           "url": "https://www.facebook.com/EctoMorphFashion"
         },
         {
           "platform": "instagram",
           "url": "https://www.instagram.com/krystina_kitsis"
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/krystina_kitsis"
+        },
+        {
+          "platform": "latex247",
+          "url": "https://www.latex247.co.uk/latex-directory/ectomorph-london"
+        },
+        {
+          "platform": "thefetishistasdirectory",
+          "url": "https://thefetishistasdirectory.com/city/london/latexclothing/ectomorph-london"
         }
       ]
     },
@@ -1018,12 +1321,44 @@
           "url": "https://elinharness.com"
         },
         {
+          "platform": "website",
+          "url": "https://elinlatex.com"
+        },
+        {
           "platform": "facebook",
           "url": "https://www.facebook.com/ElinHarness"
         },
         {
+          "platform": "facebook",
+          "url": "https://www.facebook.com/people/ElinLatex"
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/elin_latex"
+        },
+        {
           "platform": "instagram",
           "url": "https://www.instagram.com/elinharness.official"
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/elinharness.official"
+        },
+        {
+          "platform": "latex247",
+          "url": "https://www.latex247.co.uk/latex-directory/elinharness"
+        },
+        {
+          "platform": "pinterest",
+          "url": "https://ru.pinterest.com/elinharnesselin"
+        },
+        {
+          "platform": "tiktok",
+          "url": "https://www.tiktok.com/@elinlatex"
+        },
+        {
+          "platform": "youtube",
+          "url": "https://www.youtube.com/@ElinHarness"
         }
       ]
     },
@@ -1036,8 +1371,33 @@
           "url": "http://www.eustratia.co.uk"
         },
         {
+          "platform": "etsy",
+          "url": "https://www.etsy.com/shop/Eustratia",
+          "label": "Empty"
+        },
+        {
           "platform": "facebook",
           "url": "https://www.facebook.com/pg/Eustratiadesign"
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/latexbyeustratia"
+        },
+        {
+          "platform": "latex247",
+          "url": "https://www.latex247.co.uk/latex-directory/eustratia"
+        },
+        {
+          "platform": "thefetishistasdirectory",
+          "url": "https://thefetishistasdirectory.com/city/manchester/latexclothing/eustratia"
+        },
+        {
+          "platform": "tiktok",
+          "url": "https://www.tiktok.com/@eustratialatex"
+        },
+        {
+          "platform": "youtube",
+          "url": "https://www.youtube.com/channel/UCGJ9NE_y6I66tLSrJqRzF6A"
         }
       ]
     },
@@ -1059,7 +1419,8 @@
         },
         {
           "platform": "etsy",
-          "url": "https://www.etsy.com/shop/ExoLatex"
+          "url": "https://www.etsy.com/shop/ExoLatex",
+          "label": "Empty"
         },
         {
           "platform": "facebook",
@@ -1068,6 +1429,10 @@
         {
           "platform": "instagram",
           "url": "https://www.instagram.com/exolatex"
+        },
+        {
+          "platform": "latex247",
+          "url": "https://www.latex247.co.uk/latex-directory/exo-latex"
         },
         {
           "platform": "tumblr",
@@ -1082,6 +1447,7 @@
     {
       "name": "Fantastic Rubber",
       "country": "de",
+      "note": "Owner is a nazi",
       "links": [
         {
           "platform": "website",
@@ -1106,8 +1472,27 @@
       "country": "gb",
       "links": [
         {
+          "platform": "website",
+          "url": "https://www.studiofclx.com",
+          "label": "Old"
+        },
+        {
+          "platform": "etsy",
+          "url": "https://www.etsy.com/shop/FCLX",
+          "label": "Empty"
+        },
+        {
+          "platform": "facebook",
+          "url": "https://www.facebook.com/people/Studio-fclx/100079517288450"
+        },
+        {
           "platform": "instagram",
-          "url": "https://www.instagram.com/studio_fclx"
+          "url": "https://www.instagram.com/studio_fclx",
+          "label": "Old"
+        },
+        {
+          "platform": "latex247",
+          "url": "https://www.latex247.co.uk/latex-directory/studio-fclx"
         }
       ]
     },
@@ -1116,8 +1501,22 @@
       "country": "de",
       "links": [
         {
+          "platform": "website",
+          "url": "http://www.feline-latexdesigns.de",
+          "label": "Dead"
+        },
+        {
           "platform": "etsy",
           "url": "https://www.etsy.com/de/shop/FelineLatexDesigns"
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/feline_latex_designs",
+          "label": "Dead"
+        },
+        {
+          "platform": "latex247",
+          "url": "https://www.latex247.co.uk/latex-directory/feline-latex-designs"
         }
       ]
     },
@@ -1130,12 +1529,45 @@
           "url": "https://fetasialatex.com"
         },
         {
+          "platform": "website",
+          "url": "https://fetasialatex.store"
+        },
+        {
+          "platform": "deviantart",
+          "url": "https://www.deviantart.com/fetasialatex"
+        },
+        {
+          "platform": "etsy",
+          "url": "https://www.etsy.com/shop/fetasialatex"
+        },
+        {
           "platform": "facebook",
-          "url": "https://www.facebook.com/pg/FetasiaLatex"
+          "url": "https://www.facebook.com/FetasiaLatex"
         },
         {
           "platform": "instagram",
-          "url": "https://www.instagram.com/fetasia_latex"
+          "url": "https://www.instagram.com/fetasia_latex",
+          "label": "Old"
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/fetasialatex"
+        },
+        {
+          "platform": "latex247",
+          "url": "https://www.latex247.co.uk/latex-directory/fetasia-latex"
+        },
+        {
+          "platform": "pinterest",
+          "url": "https://www.pinterest.com/fetasialatex"
+        },
+        {
+          "platform": "thefetishistasdirectory",
+          "url": "https://thefetishistasdirectory.com/city/leeds/latexclothing/fetasia-latex"
+        },
+        {
+          "platform": "x",
+          "url": "https://x.com/fetasialatex"
         }
       ]
     },
@@ -1150,16 +1582,35 @@
         {
           "platform": "facebook",
           "url": "https://www.facebook.com/FeiticoMasken"
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/feiticomasks"
+        },
+        {
+          "platform": "latexzentrale",
+          "url": "https://www.latexzentrale.com/index.php/community/linkliste.html?ac=show_link&catid=1&linkid=134"
+        },
+        {
+          "platform": "thefetishistasdirectory",
+          "url": "https://thefetishistasdirectory.com/city/berlin/latexclothing/feitico"
         }
       ]
     },
     {
       "name": "FutureFetish",
       "country": "de",
+      "note": "Redirects to LatexOne (PL) and LatexCrazy (DE)",
       "links": [
         {
           "platform": "website",
-          "url": "https://futurefetish.com"
+          "url": "https://futurefetish.com",
+          "label": "Redirect"
+        },
+        {
+          "platform": "website",
+          "url": "https://future-fetish.com",
+          "label": "Redirect"
         },
         {
           "platform": "facebook",
@@ -1182,6 +1633,10 @@
         {
           "platform": "website",
           "url": "https://www.gumique.com"
+        },
+        {
+          "platform": "thefetishistasdirectory",
+          "url": "https://thefetishistasdirectory.com/city/poznan/latexclothing/gumique-latex"
         }
       ]
     },
@@ -1194,8 +1649,30 @@
           "url": "https://www.hedonydesign.com"
         },
         {
+          "platform": "etsy",
+          "url": "https://www.etsy.com/shop/hedonydesign",
+          "label": "Empty"
+        },
+        {
           "platform": "facebook",
           "url": "https://www.facebook.com/pg/hedonydesignparis"
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/hedonydesign"
+        },
+        {
+          "platform": "latex247",
+          "url": "https://www.latex247.co.uk/latex-directory/hedony-design"
+        },
+        {
+          "platform": "linkedin",
+          "url": "https://www.linkedin.com/company/hedonydesign"
+        },
+        {
+          "platform": "x",
+          "url": "https://x.com/hedonydesign",
+          "label": "Empty"
         }
       ]
     },
@@ -1205,7 +1682,24 @@
       "links": [
         {
           "platform": "website",
-          "url": "http://gallery.highglossdolls.com/shop"
+          "url": "http://gallery.highglossdolls.com/shop",
+          "label": "Old"
+        },
+        {
+          "platform": "website",
+          "url": "https://highglossdolls.com"
+        },
+        {
+          "platform": "facebook",
+          "url": "https://www.facebook.com/people/HighGlossDolls/100066201463341/#"
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/highglossdolls"
+        },
+        {
+          "platform": "model-kartei",
+          "url": "https://www.model-kartei.de/portfolios/photographer/8427/fraeulein-ehrhardt-highglossdolls"
         }
       ]
     },
@@ -1218,12 +1712,20 @@
           "url": "http://www.houseofharlot.com"
         },
         {
+          "platform": "etsy",
+          "url": "https://www.etsy.com/shop/HOUSEofHARLOT"
+        },
+        {
           "platform": "facebook",
           "url": "https://www.facebook.com/houseofharlot"
         },
         {
           "platform": "instagram",
           "url": "https://www.instagram.com/houseofharlot"
+        },
+        {
+          "platform": "latex247",
+          "url": "https://www.latex247.co.uk/latex-directory/house-of-harlot"
         },
         {
           "platform": "x",
@@ -1248,6 +1750,19 @@
           "url": "https://www.instagram.com/hw_design_latex"
         },
         {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/hwdesignlatex__backup",
+          "label": "Backup"
+        },
+        {
+          "platform": "latex247",
+          "url": "https://www.latex247.co.uk/latex-directory/hw-design"
+        },
+        {
+          "platform": "thefetishistasdirectory",
+          "url": "https://thefetishistasdirectory.com/city/vienna/latexclothing/hw-design"
+        },
+        {
           "platform": "x",
           "url": "https://x.com/HWD_latex"
         }
@@ -1264,6 +1779,18 @@
         {
           "platform": "facebook",
           "url": "https://www.facebook.com/pg/InnerSanctumLatex"
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/inner_sanctum_latex"
+        },
+        {
+          "platform": "joyclub",
+          "url": "https://www.joyclub.com/en/shop/2357849.inner_sanctum.html"
+        },
+        {
+          "platform": "latex247",
+          "url": "https://www.latex247.co.uk/latex-directory/inner-sanctum"
         }
       ]
     },
@@ -1274,6 +1801,26 @@
         {
           "platform": "website",
           "url": "https://www.invinciblerubber.com"
+        },
+        {
+          "platform": "bluesky",
+          "url": "https://bsky.app/profile/invinciblerubber.bsky.social"
+        },
+        {
+          "platform": "facebook",
+          "url": "https://www.facebook.com/InvincibleRubber"
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/invinciblerubber"
+        },
+        {
+          "platform": "latex247",
+          "url": "https://www.latex247.co.uk/latex-directory/invincible-rubber"
+        },
+        {
+          "platform": "x",
+          "url": "https://x.com/invinciblerubbr"
         }
       ]
     },
