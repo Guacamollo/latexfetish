@@ -28,5 +28,6 @@ If you have additions or corrections/updates feel free to make a pull request. T
 - **Vivishine** [<img src="assets/icons/website.svg" alt="website" title="Website" width="20">](https://www.vivishine.com)
 
 ## Credits
-Flag icons are from [Twemoji](https://github.com/twitter/twemoji) by Twitter/X contributors.
-Licensed under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+- Flag icons are from [Twemoji](https://github.com/twitter/twemoji) by Twitter/X contributors, licensed under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+- The rubber pride flag is based on the design by Peter Tolos and Scott Moats (1994).
+- Platform icons are trademarks of their respective services and are used for identification only.
