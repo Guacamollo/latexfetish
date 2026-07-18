@@ -11,21 +11,10 @@ If you have additions or corrections/updates feel free to make a pull request. T
 - [Designers](docs/designers.md)
 - [Shops, Retailers & Resellers](docs/shops.md)
 - [Models](docs/models.md)
-- [Photographers & Gallery sites](docs/photographers.md)
+- [Photographers & Gallery Sites](docs/photographers.md)
 - [Communities](docs/communities.md)
 - [Events](docs/events.md)
-- [Magazines](docs/magazines.md)
-
----
-
-## Resources
-- **Latex Wiki** [<img src="assets/icons/website.svg" alt="website" title="Website" width="20">](https://latexwiki.com/index.php?title=Main_Page)
-- **Making latex clothing** [<img src="assets/icons/website.svg" alt="website" title="Website" width="20">](http://makinglatexclothing.com/)
-
-## Miscellaneous
-- **beGLOSS** [<img src="assets/icons/website.svg" alt="website" title="Website" width="20">](https://www.begloss.com)
-- <img src="assets/flags/gb.svg" width="20" alt="GB" title="United Kingdom"> **LatexFashionTV** [<img src="assets/icons/website.svg" alt="website" title="Website" width="20">](https://www.patreon.com/latexfashiontv)
-- **Vivishine** [<img src="assets/icons/website.svg" alt="website" title="Website" width="20">](https://www.vivishine.com)
+- [Magazines & Media](docs/magazines.md)
 
 ## Credits
 - Flag icons are from [Twemoji](https://github.com/twitter/twemoji) by Twitter/X contributors, licensed under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/).
