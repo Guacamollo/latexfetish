@@ -1,0 +1,24 @@
+{
+  "care": [
+    {
+      "name": "beGLOSS",
+      "country": "de",
+      "links": [
+        {
+          "platform": "website",
+          "url": "https://www.begloss.com"
+        }
+      ]
+    },
+    {
+      "name": "Vivishine",
+      "country": "de",
+      "links": [
+        {
+          "platform": "website",
+          "url": "https://www.vivishine.com"
+        }
+      ]
+    }
+  ]
+}

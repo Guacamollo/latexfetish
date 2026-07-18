@@ -1,0 +1,36 @@
+{
+  "resources": [
+    {
+      "name": "Latex Wiki",
+      "links": [
+        {
+          "platform": "website",
+          "url": "https://latexwiki.com/index.php?title=Main_Page"
+        }
+      ]
+    },
+    {
+      "name": "Making Latex Clothing",
+      "links": [
+        {
+          "platform": "website",
+          "url": "http://makinglatexclothing.com"
+        }
+      ]
+    },
+    {
+      "name": "WearLatex",
+      "links": [
+        {
+          "platform": "website",
+          "url": "https://www.wearlatex.com"
+        },
+        {
+          "platform": "website",
+          "url": "https://www.wearlatex.com/category/vendors",
+          "label": "Vendor A-Z"
+        }
+      ]
+    }
+  ]
+}

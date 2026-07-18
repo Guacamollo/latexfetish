@@ -15,6 +15,8 @@ If you have additions or corrections/updates feel free to make a pull request. T
 - [Communities](docs/communities.md)
 - [Events](docs/events.md)
 - [Magazines & Media](docs/magazines.md)
+- [Resources](docs/resources.md)
+- [Care & Maintenance](docs/care.md)
 
 ## Credits
 - Flag icons are from [Twemoji](https://github.com/twitter/twemoji) by Twitter/X contributors, licensed under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/).
