@@ -142,13 +142,13 @@
       "links": [
         {
           "platform": "website",
-          "url": "http://www.amatoris.de",
-          "label": "Old"
+          "url": "https://amatoris-shop.de",
+          "label": "New"
         },
         {
           "platform": "website",
-          "url": "https://amatoris-shop.de",
-          "label": "New"
+          "url": "http://www.amatoris.de",
+          "label": "Old"
         },
         {
           "platform": "etsy",
@@ -576,13 +576,13 @@
       "links": [
         {
           "platform": "website",
-          "url": "https://www.brightandshiny.ru",
-          "label": "Old"
+          "url": "https://www.brightandshinystore.com",
+          "label": "New"
         },
         {
           "platform": "website",
-          "url": "https://www.brightandshinystore.com",
-          "label": "New"
+          "url": "https://www.brightandshiny.ru",
+          "label": "Old"
         },
         {
           "platform": "etsy",
@@ -590,13 +590,13 @@
         },
         {
           "platform": "facebook",
-          "url": "https://www.facebook.com/pg/brightandshiny.ru",
-          "label": "Old"
+          "url": "https://www.facebook.com/brightandshinystore",
+          "label": "New"
         },
         {
           "platform": "facebook",
-          "url": "https://www.facebook.com/brightandshinystore",
-          "label": "New"
+          "url": "https://www.facebook.com/pg/brightandshiny.ru",
+          "label": "Old"
         },
         {
           "platform": "instagram",
@@ -618,23 +618,23 @@
       "links": [
         {
           "platform": "website",
-          "url": "http://www.brigitte-more.nl/stores.htm",
-          "label": "Old"
-        },
-        {
-          "platform": "website",
           "url": "http://www.brigittemore.com",
           "label": "New"
         },
         {
-          "platform": "facebook",
-          "url": "https://www.facebook.com/brigitte.more.latexdesign",
+          "platform": "website",
+          "url": "http://www.brigitte-more.nl/stores.htm",
           "label": "Old"
         },
         {
           "platform": "facebook",
           "url": "https://www.facebook.com/pg/bRIGITTEmORE",
           "label": "New"
+        },
+        {
+          "platform": "facebook",
+          "url": "https://www.facebook.com/brigitte.more.latexdesign",
+          "label": "Old"
         },
         {
           "platform": "instagram",
@@ -842,13 +842,13 @@
         },
         {
           "platform": "tiktok",
-          "url": "https://www.tiktok.com/@chronobabes",
-          "label": "Old"
+          "url": "https://www.tiktok.com/@chronomatic_latex",
+          "label": "New"
         },
         {
           "platform": "tiktok",
-          "url": "https://www.tiktok.com/@chronomatic_latex",
-          "label": "New"
+          "url": "https://www.tiktok.com/@chronobabes",
+          "label": "Old"
         },
         {
           "platform": "x",
@@ -1048,12 +1048,12 @@
         },
         {
           "platform": "etsy",
-          "url": "https://www.etsy.com/shop/DarkVirtueDesigns",
-          "label": "Empty"
+          "url": "https://www.etsy.com/shop/DarkVirtueDesigns"
         },
         {
           "platform": "etsy",
-          "url": "https://www.etsy.com/shop/DarkVirtueDesigns"
+          "url": "https://www.etsy.com/shop/DarkVirtueDesigns",
+          "label": "Empty"
         },
         {
           "platform": "facebook",
@@ -1187,7 +1187,10 @@
     },
     {
       "name": "Demask",
-      "country": "nl",
+      "countries": [
+        "cz",
+        "nl"
+      ],
       "links": [
         {
           "platform": "website",
@@ -1195,18 +1198,18 @@
         },
         {
           "platform": "facebook",
-          "url": "https://www.facebook.com/DemaskAmsterdam",
-          "label": "Old"
-        },
-        {
-          "platform": "facebook",
           "url": "https://www.facebook.com/DeMasK.officialpage",
           "label": "New"
         },
         {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/demask_international",
+          "platform": "facebook",
+          "url": "https://www.facebook.com/DemaskAmsterdam",
           "label": "Old"
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/demask_berlin",
+          "label": "Berlin"
         },
         {
           "platform": "instagram",
@@ -1215,8 +1218,8 @@
         },
         {
           "platform": "instagram",
-          "url": "https://www.instagram.com/demask_berlin",
-          "label": "Berlin"
+          "url": "https://www.instagram.com/demask_international",
+          "label": "Old"
         },
         {
           "platform": "latex247",
@@ -1546,12 +1549,12 @@
         },
         {
           "platform": "instagram",
-          "url": "https://www.instagram.com/fetasia_latex",
-          "label": "Old"
+          "url": "https://www.instagram.com/fetasialatex"
         },
         {
           "platform": "instagram",
-          "url": "https://www.instagram.com/fetasialatex"
+          "url": "https://www.instagram.com/fetasia_latex",
+          "label": "Old"
         },
         {
           "platform": "latex247",
@@ -1682,12 +1685,12 @@
       "links": [
         {
           "platform": "website",
-          "url": "http://gallery.highglossdolls.com/shop",
-          "label": "Old"
+          "url": "https://highglossdolls.com"
         },
         {
           "platform": "website",
-          "url": "https://highglossdolls.com"
+          "url": "http://gallery.highglossdolls.com/shop",
+          "label": "Old"
         },
         {
           "platform": "facebook",
@@ -1958,13 +1961,13 @@
       "links": [
         {
           "platform": "website",
-          "url": "http://www.lacinglilith.com",
-          "label": "Old"
+          "url": "https://www.elitelatex.co.uk",
+          "label": "New"
         },
         {
           "platform": "website",
-          "url": "https://www.elitelatex.co.uk",
-          "label": "New"
+          "url": "http://www.lacinglilith.com",
+          "label": "Old"
         },
         {
           "platform": "etsy",

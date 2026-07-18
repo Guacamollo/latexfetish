@@ -120,7 +120,10 @@
     },
     {
       "name": "Wasteland",
-      "country": "nl",
+      "countries": [
+        "nl",
+        "de"
+      ],
       "links": [
         {
           "platform": "website",
