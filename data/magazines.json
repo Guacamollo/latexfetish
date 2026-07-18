@@ -37,6 +37,7 @@
     },
     {
       "name": "Kultur Mag",
+      "country": "za",
       "links": [
         {
           "platform": "website",
@@ -72,6 +73,17 @@
         {
           "platform": "instagram",
           "url": "https://www.instagram.com/latex247"
+        }
+      ]
+    },
+    {
+      "name": "LatexFashionTV",
+      "country": "gb",
+      "type": "video",
+      "links": [
+        {
+          "platform": "website",
+          "url": "https://www.patreon.com/latexfashiontv"
         }
       ]
     },
