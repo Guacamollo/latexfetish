@@ -1,8 +1,9 @@
 {
-  "models_female": [
+  "models": [
     {
       "name": "Agna Devi",
       "country": "ru",
+      "gender": "female",
       "links": [
         {
           "platform": "website",
@@ -17,6 +18,7 @@
     {
       "name": "Alexa Moorre",
       "country": "nl",
+      "gender": "female",
       "links": [
         {
           "platform": "website",
@@ -31,6 +33,7 @@
     {
       "name": "Bella Isadora",
       "country": "de",
+      "gender": "female",
       "links": [
         {
           "platform": "facebook",
@@ -45,6 +48,7 @@
     {
       "name": "Beyla Hughes",
       "country": "de",
+      "gender": "female",
       "links": [
         {
           "platform": "facebook",
@@ -63,6 +67,7 @@
     {
       "name": "Bianca Beauchamp",
       "country": "ca",
+      "gender": "female",
       "links": [
         {
           "platform": "website",
@@ -81,6 +86,7 @@
     {
       "name": "Bloxi",
       "country": "de",
+      "gender": "female",
       "links": [
         {
           "platform": "facebook",
@@ -95,6 +101,7 @@
     {
       "name": "Bunny GlitterGun",
       "country": "nl",
+      "gender": "female",
       "links": [
         {
           "platform": "facebook",
@@ -109,6 +116,7 @@
     {
       "name": "Calamity Amelie",
       "country": "se",
+      "gender": "female",
       "links": [
         {
           "platform": "website",
@@ -123,6 +131,7 @@
     {
       "name": "Cat Atonia",
       "country": "de",
+      "gender": "female",
       "links": [
         {
           "platform": "facebook",
@@ -133,6 +142,7 @@
     {
       "name": "Celene Nox",
       "country": "de",
+      "gender": "female",
       "links": [
         {
           "platform": "facebook",
@@ -147,6 +157,7 @@
     {
       "name": "Claudia le Fey",
       "country": "de",
+      "gender": "female",
       "links": [
         {
           "platform": "website",
@@ -161,6 +172,7 @@
     {
       "name": "Dani Divine",
       "country": "gb",
+      "gender": "female",
       "links": [
         {
           "platform": "website",
@@ -179,6 +191,7 @@
     {
       "name": "Dawina Starling",
       "country": "ch",
+      "gender": "female",
       "links": [
         {
           "platform": "website",
@@ -193,6 +206,7 @@
     {
       "name": "Diva Nova/Emanuela Solomie",
       "country": "de",
+      "gender": "female",
       "links": [
         {
           "platform": "facebook",
@@ -203,6 +217,7 @@
     {
       "name": "Dorothy C",
       "country": "de",
+      "gender": "female",
       "links": [
         {
           "platform": "website",
@@ -213,6 +228,7 @@
     {
       "name": "Dutch Dame",
       "country": "nl",
+      "gender": "female",
       "links": [
         {
           "platform": "website",
@@ -235,6 +251,7 @@
     {
       "name": "ElegyEllem",
       "country": "se",
+      "gender": "female",
       "links": [
         {
           "platform": "website",
@@ -249,6 +266,7 @@
     {
       "name": "Eva Lilienthal",
       "country": "de",
+      "gender": "female",
       "links": [
         {
           "platform": "website",
@@ -263,6 +281,7 @@
     {
       "name": "Evilyn13",
       "country": "ca",
+      "gender": "female",
       "links": [
         {
           "platform": "website",
@@ -285,6 +304,7 @@
     {
       "name": "Frau Tagtraum",
       "country": "de",
+      "gender": "female",
       "links": [
         {
           "platform": "facebook",
@@ -299,6 +319,7 @@
     {
       "name": "Fuxteufelswild",
       "country": "de",
+      "gender": "female",
       "links": [
         {
           "platform": "facebook",
@@ -313,6 +334,7 @@
     {
       "name": "Honeyhair",
       "country": "cz",
+      "gender": "female",
       "links": [
         {
           "platform": "website",
@@ -339,6 +361,7 @@
     {
       "name": "Jade Vixen",
       "country": "us",
+      "gender": "female",
       "links": [
         {
           "platform": "facebook",
@@ -361,6 +384,7 @@
     {
       "name": "Katie Marin",
       "country": "fi",
+      "gender": "female",
       "links": [
         {
           "platform": "website",
@@ -379,6 +403,7 @@
     {
       "name": "Katie Miller",
       "country": "nl",
+      "gender": "female",
       "links": [
         {
           "platform": "facebook",
@@ -389,6 +414,7 @@
     {
       "name": "Kay Morgan",
       "country": "be",
+      "gender": "female",
       "links": [
         {
           "platform": "website",
@@ -407,6 +433,7 @@
     {
       "name": "Kiet Katharsis",
       "country": "nl",
+      "gender": "female",
       "links": [
         {
           "platform": "facebook",
@@ -421,6 +448,7 @@
     {
       "name": "L'Adinda Latex",
       "country": "nl",
+      "gender": "female",
       "links": [
         {
           "platform": "facebook",
@@ -435,6 +463,7 @@
     {
       "name": "Lara Aimee",
       "country": "nl",
+      "gender": "female",
       "links": [
         {
           "platform": "website",
@@ -453,6 +482,7 @@
     {
       "name": "LatexVin",
       "country": "de",
+      "gender": "female",
       "links": [
         {
           "platform": "website",
@@ -467,6 +497,7 @@
     {
       "name": "LickyLinn",
       "country": "se",
+      "gender": "female",
       "links": [
         {
           "platform": "facebook",
@@ -481,6 +512,7 @@
     {
       "name": "Luby Wayne",
       "country": "de",
+      "gender": "female",
       "links": [
         {
           "platform": "facebook",
@@ -495,6 +527,7 @@
     {
       "name": "Madmoiselle Jou",
       "country": "fr",
+      "gender": "female",
       "links": [
         {
           "platform": "facebook",
@@ -513,6 +546,7 @@
     {
       "name": "Mandy Xotoxic",
       "country": "de",
+      "gender": "female",
       "links": [
         {
           "platform": "etsy",
@@ -531,6 +565,7 @@
     {
       "name": "Marilyn Yusuf",
       "country": "bg",
+      "gender": "female",
       "links": [
         {
           "platform": "website",
@@ -549,6 +584,7 @@
     {
       "name": "Mary D",
       "country": "ch",
+      "gender": "female",
       "links": [
         {
           "platform": "facebook",
@@ -559,6 +595,7 @@
     {
       "name": "Masuimi Max",
       "country": "us",
+      "gender": "female",
       "links": [
         {
           "platform": "website",
@@ -577,6 +614,7 @@
     {
       "name": "MerySP",
       "country": "gb",
+      "gender": "female",
       "links": [
         {
           "platform": "facebook",
@@ -591,6 +629,7 @@
     {
       "name": "Misplaced",
       "country": "de",
+      "gender": "female",
       "links": [
         {
           "platform": "facebook",
@@ -601,6 +640,7 @@
     {
       "name": "Miss Agavi",
       "country": "pl",
+      "gender": "female",
       "links": [
         {
           "platform": "facebook",
@@ -615,6 +655,7 @@
     {
       "name": "Miss Fetilicious",
       "country": "be",
+      "gender": "female",
       "links": [
         {
           "platform": "website",
@@ -641,6 +682,7 @@
     {
       "name": "Miss Loulou",
       "country": "se",
+      "gender": "female",
       "links": [
         {
           "platform": "facebook",
@@ -651,6 +693,7 @@
     {
       "name": "Miss Mandy",
       "country": "se",
+      "gender": "female",
       "links": [
         {
           "platform": "facebook",
@@ -665,16 +708,17 @@
     {
       "name": "Miss Mosh",
       "country": "us",
+      "gender": "female",
       "links": [
-        {
-          "platform": "facebook",
-          "url": "https://www.facebook.com/Miss-Mosh-259779070725752",
-          "label": "Old"
-        },
         {
           "platform": "facebook",
           "url": "https://www.facebook.com/OfficiallyMosh",
           "label": "New"
+        },
+        {
+          "platform": "facebook",
+          "url": "https://www.facebook.com/Miss-Mosh-259779070725752",
+          "label": "Old"
         },
         {
           "platform": "instagram",
@@ -689,6 +733,7 @@
     {
       "name": "Miss Suzume",
       "country": "de",
+      "gender": "female",
       "links": [
         {
           "platform": "facebook",
@@ -703,6 +748,7 @@
     {
       "name": "My Little Vronie",
       "country": "se",
+      "gender": "female",
       "links": [
         {
           "platform": "website",
@@ -717,6 +763,7 @@
     {
       "name": "Nina Kate",
       "country": "us",
+      "gender": "female",
       "links": [
         {
           "platform": "facebook",
@@ -731,6 +778,7 @@
     {
       "name": "Onna Sakura",
       "country": "de",
+      "gender": "female",
       "links": [
         {
           "platform": "facebook",
@@ -741,6 +789,7 @@
     {
       "name": "Plüschpeitsche",
       "country": "de",
+      "gender": "female",
       "links": [
         {
           "platform": "facebook",
@@ -751,6 +800,7 @@
     {
       "name": "Psylocke",
       "country": "se",
+      "gender": "female",
       "links": [
         {
           "platform": "facebook",
@@ -769,6 +819,7 @@
     {
       "name": "Romanie Smith",
       "country": "gb",
+      "gender": "female",
       "links": [
         {
           "platform": "website",
@@ -787,6 +838,7 @@
     {
       "name": "Roshie",
       "country": "au",
+      "gender": "female",
       "links": [
         {
           "platform": "facebook",
@@ -797,6 +849,7 @@
     {
       "name": "SALVATION",
       "country": "de",
+      "gender": "female",
       "links": [
         {
           "platform": "facebook",
@@ -807,6 +860,7 @@
     {
       "name": "Sister Sinister",
       "country": "se",
+      "gender": "female",
       "links": [
         {
           "platform": "facebook",
@@ -824,8 +878,9 @@
     },
     {
       "name": "Star model",
-      "former_name": "Starfucked",
       "country": "se",
+      "gender": "female",
+      "former_name": "Starfucked",
       "links": [
         {
           "platform": "website",
@@ -848,6 +903,7 @@
     {
       "name": "Susan Wayland",
       "country": "de",
+      "gender": "female",
       "links": [
         {
           "platform": "website",
@@ -870,6 +926,7 @@
     {
       "name": "Ulorin Vex",
       "country": "us",
+      "gender": "female",
       "links": [
         {
           "platform": "website",
@@ -884,6 +941,7 @@
     {
       "name": "Vaine Villaine",
       "country": "de",
+      "gender": "female",
       "links": [
         {
           "platform": "facebook",
@@ -894,6 +952,7 @@
     {
       "name": "Yolinda Vixen",
       "country": "nl",
+      "gender": "female",
       "links": [
         {
           "platform": "facebook",
@@ -904,6 +963,7 @@
     {
       "name": "Zara Axeronias",
       "country": "de",
+      "gender": "female",
       "links": [
         {
           "platform": "facebook",
@@ -914,6 +974,7 @@
     {
       "name": "Zara du Rose",
       "country": "gb",
+      "gender": "female",
       "links": [
         {
           "platform": "website",
