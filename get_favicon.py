@@ -4,12 +4,11 @@ Download a website's favicon.
 
 Strategy:
   1. Fetch page and parse <link rel="icon" | "shortcut icon" | "apple-touch-icon" ...> tags
-  2. Gets biggest images; Prefers SVGs
-  3. Fall back to <scheme>://<host>/favicon.ico
+  2. Prefer SVGs then largest declared size
+  3. Fall back to <scheme>://<host>/favicon.ico, then to Google/DuckDuckGo favicon services
   4. Save as PNG; SVGs pass through unchanged
 
-Requires: curl_cffi, beautifulsoup4, Pillow, tldextract
-    pip install curl_cffi beautifulsoup4 Pillow tldextract
+Requires: curl_cffi, beautifulsoup4, Pillow, tldextract pip install curl_cffi beautifulsoup4 Pillow tldextract
 """
 
 import argparse
@@ -23,7 +22,7 @@ from bs4 import BeautifulSoup
 from curl_cffi import requests
 from PIL import Image
 
-IMPERSONATE = "chrome133"
+IMPERSONATE = "chrome"
 
 ICON_RELS = {
     "icon",
@@ -40,7 +39,7 @@ def _parse_size(sizes_attr: str | None) -> int:
         return 0
     best = 0
     for token in sizes_attr.split():
-        if token.lower() == "any":  # SVG / scalable
+        if token.lower() == "any":  # SVG
             return 10_000
         try:
             w, h = token.lower().split("x")
@@ -90,7 +89,8 @@ def find_icon_candidates(page_url: str) -> list[str]:
         is_svg = link_type == "image/svg+xml" or path.endswith(".svg")
 
         size = _parse_size(link.get("sizes"))
-        if is_svg:
+        # Filter out mask-icon
+        if is_svg and "mask-icon" not in rels:
             size = max(size, 10_000)
 
         rel_bonus = 1 if rels & {"icon", "shortcut icon"} else 0
@@ -103,7 +103,8 @@ def find_icon_candidates(page_url: str) -> list[str]:
 def _is_svg(content: bytes) -> bool:
     """Detect SVG by content"""
     head = content.lstrip()[:2048].lower()
-    return (head.startswith(b"<?xml") and b"<svg" in head) or head.startswith(b"<svg")
+    return (b"<svg" in head
+            and head.startswith((b"<?xml", b"<svg", b"<!doctype svg", b"<!--")))
 
 
 def _to_png(content: bytes) -> bytes:
@@ -119,6 +120,43 @@ def _to_png(content: bytes) -> bytes:
     out = io.BytesIO()
     img.save(out, format="PNG")
     return out.getvalue()
+
+
+# Generic favicon services; Return placeholder icon (Google: globe) instead of failing when site has no favicon.
+FALLBACK_SERVICES = ("google.com/s2/favicons", "icons.duckduckgo.com")
+
+
+def _fetch_icon(url: str) -> tuple[bytes, str] | None:
+    """Download one candidate URL; return (data, file extension) or None."""
+    try:
+        resp = requests.get(
+            url,
+            timeout=10,
+            allow_redirects=True,
+            impersonate=IMPERSONATE,
+        )
+    except Exception as e:
+        print(f"  {url}: request failed ({e})", file=sys.stderr)
+        return None
+    if resp.status_code != 200:
+        print(f"  {url}: HTTP {resp.status_code}", file=sys.stderr)
+        return None
+    if not resp.content:
+        print(f"  {url}: empty response body", file=sys.stderr)
+        return None
+    ctype = resp.headers.get("Content-Type", "").lower()
+    if "html" in ctype:
+        print(f"  {url}: skipped (Content-Type {ctype!r} looks like an HTML error page)",
+              file=sys.stderr)
+        return None
+
+    try:
+        if _is_svg(resp.content):
+            return resp.content, ".svg"
+        return _to_png(resp.content), ".png"
+    except Exception as e:
+        print(f"  {url}: could not decode ({e})", file=sys.stderr)
+        return None
 
 
 def download_favicon(page_url: str, out_dir: str = ".") -> Path | None:
@@ -139,39 +177,16 @@ def download_favicon(page_url: str, out_dir: str = ".") -> Path | None:
     name = _clean_filename(parsed.netloc)
 
     for url in candidates:
-        try:
-            resp = requests.get(
-                url,
-                timeout=10,
-                allow_redirects=True,
-                impersonate=IMPERSONATE,
-            )
-        except Exception as e:
-            print(f"  {url}: request failed ({e})", file=sys.stderr)
+        result = _fetch_icon(url)
+        if result is None:
             continue
-        if resp.status_code != 200:
-            print(f"  {url}: HTTP {resp.status_code}", file=sys.stderr)
-            continue
-        if not resp.content:
-            print(f"  {url}: empty response body", file=sys.stderr)
-            continue
-        ctype = resp.headers.get("Content-Type", "").lower()
-        if "html" in ctype:
-            print(f"  {url}: skipped (Content-Type {ctype!r} looks like an HTML error page)",
-                  file=sys.stderr)
-            continue
-
-        content = resp.content
-        try:
-            if _is_svg(content):
-                data, ext = content, ".svg"
-            else:
-                data, ext = _to_png(content), ".png"
-        except Exception as e:
-            print(f"  {url}: could not decode ({e})", file=sys.stderr)
-            continue
-
-        filename = Path(out_dir) / f"{name}{ext}"
+        data, ext = result
+        if any(service in url for service in FALLBACK_SERVICES):
+            print("  note: icon came from a generic favicon service; "
+                  "verify it isn't a placeholder.", file=sys.stderr)
+        out_path = Path(out_dir)
+        out_path.mkdir(parents=True, exist_ok=True)
+        filename = out_path / f"{name}{ext}"
         filename.write_bytes(data)
         print(f"Saved {url} -> {filename}")
         return filename
@@ -181,9 +196,11 @@ def download_favicon(page_url: str, out_dir: str = ".") -> Path | None:
 
 
 def main() -> int:
+    default_out = Path(__file__).resolve().parent / "assets" / "icons"
     p = argparse.ArgumentParser(description="Download a website's favicon as PNG (or SVG).")
     p.add_argument("url", help="Site URL, e.g. https://stackoverflow.com")
-    p.add_argument("-o", "--out-dir", default=".", help="Directory to save the icon in")
+    p.add_argument("-o", "--out-dir", default=str(default_out),
+                   help="Directory to save the icon in (default: assets/icons next to this script)")
     args = p.parse_args()
     return 0 if download_favicon(args.url, args.out_dir) else 1
 
