@@ -59,24 +59,6 @@
       ]
     },
     {
-      "name": "Latex 24/7",
-      "country": "gb",
-      "links": [
-        {
-          "platform": "website",
-          "url": "https://www.latex247.co.uk"
-        },
-        {
-          "platform": "facebook",
-          "url": "https://www.facebook.com/latex247"
-        },
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/latex247"
-        }
-      ]
-    },
-    {
       "name": "LatexFashionTV",
       "country": "gb",
       "type": "video",
@@ -101,6 +83,16 @@
       ]
     },
     {
+      "name": "Marquis",
+      "country": "de",
+      "links": [
+        {
+          "platform": "website",
+          "url": "https://marquis-magazine.com"
+        }
+      ]
+    },
+    {
       "name": "Rubber Life",
       "type": "book",
       "links": [
@@ -112,10 +104,27 @@
     },
     {
       "name": "Skin Two Magazine",
+      "country": "uk",
       "links": [
         {
           "platform": "website",
           "url": "https://www.skintwo.com/sk2-magazine"
+        },
+        {
+          "platform": "facebook",
+          "url": "https://www.facebook.com/sk2clothing"
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/skintwoglobal"
+        },
+        {
+          "platform": "latex247",
+          "url": "https://www.latex247.co.uk/latex-directory/skin-two-clothing"
+        },
+        {
+          "platform": "x",
+          "url": "https://x.com/skintwo"
         }
       ]
     },
@@ -125,6 +134,39 @@
         {
           "platform": "website",
           "url": "https://thefetishistas.com"
+        },
+        {
+          "platform": "facebook",
+          "url": "https://facebook.com/thefetishistas"
+        },
+        {
+          "platform": "instagram",
+          "url": "https://instagram.com/fetishistas"
+        },
+        {
+          "platform": "pinterest",
+          "url": "https://pinterest.com/mitchell2933"
+        },
+        {
+          "platform": "x",
+          "url": "https://x.com/MrFetishista"
+        },
+        {
+          "platform": "youtube",
+          "url": "https://www.youtube.com/channel/UCSnMSjIMZhqvG9DP0oset9Qmitchell2933"
+        }
+      ]
+    },
+    {
+      "name": "The Latex Magazine",
+      "links": [
+        {
+          "platform": "website",
+          "url": "https://www.thelatexmagazine.com"
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/thelatexmagazine"
         }
       ]
     },

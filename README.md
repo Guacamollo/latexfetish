@@ -15,6 +15,15 @@ It acknowledges the work of the (now defunct) [*latexcouture.esy.es*](https://we
 - [Resources](docs/resources.md)
 - [Care & Maintenance](docs/care.md)
 
+## Workplan
+
+The current plan on my end: 
+1. Check and extend the current sites with other platforms
+2. Remove/move not existing entries or platforms
+3. Add new links
+4. Maybe prettier website out of these data with search and filter functions.
+5. Adding also tags for specific products and such would be great.
+
 ## Contributing
 
 Additions and corrections are welcome - feel free to make a pull request.
@@ -37,12 +46,14 @@ An entry looks like this:
 ```
 
 Optional keys:
-`countries` (a list of codes instead of `country`, for entries spanning several countries),
-`gender` (models: `female`, `male` or `other`),
-`former_name`, `type` (e.g. `book`, `video`) and
-`note`.
+- `countries` (a list of codes instead of `country`, for entries spanning several countries)
+- `gender` (models: `female`, `male` or `other`)
+- `former_name`
+- `type` (e.g. `book`, `video`)
+- `note`
 
 The valid `platform` ids and country codes are listed in [build_list.py](build_list.py).
+These can be updated and enhanced.
 
 After editing a JSON file, normalize it and regenerate its page:
 
@@ -55,5 +66,5 @@ A new platform needs an icon in [`assets/icons/`](assets/icons/) and an entry in
 
 ## Credits
 - Flag icons are from [Twemoji](https://github.com/twitter/twemoji) by Twitter/X contributors, licensed under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/).
-- The rubber pride flag is based on the design by Peter Tolos and Scott Moats (1994).
+- The rubber pride flag is based on the design by Peter Tolos (RubberBear) and Scott Moats (1994).
 - Platform icons are trademarks of their respective services and are used for identification only.

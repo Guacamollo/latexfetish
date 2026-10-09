@@ -1,12 +1,18 @@
 {
   "communities": [
     {
-      "name": "Darkside",
+      "name": "Diversia (Darkside)",
       "country": "se",
       "links": [
         {
           "platform": "website",
-          "url": "http://darkside.se"
+          "url": "http://darkside.se",
+          "note": "Old"
+        },
+        {
+          "platform": "website",
+          "url": "https://diversia.social",
+          "note": "New"
         }
       ]
     },
@@ -17,6 +23,23 @@
         {
           "platform": "website",
           "url": "http://fetlife.com"
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/fetlifeofficial"
+        },
+        {
+          "platform": "x",
+          "url": "https://x.com/FetLife"
+        }
+      ]
+    },
+    {
+      "name": "International Association of Rubberists",
+      "links": [
+        {
+          "platform": "website",
+          "url": "http://www.rubberist.net"
         }
       ]
     },
@@ -27,6 +50,35 @@
         {
           "platform": "website",
           "url": "https://www.joyclub.com"
+        }
+      ]
+    },
+    {
+      "name": "Latex Zentrale",
+      "country": "de",
+      "links": [
+        {
+          "platform": "website",
+          "url": "http://www.latexzentrale.com"
+        }
+      ]
+    },
+    {
+      "name": "Regnfrakker",
+      "country": "dk",
+      "links": [
+        {
+          "platform": "website",
+          "url": "http://www.regnfrakker.dk"
+        }
+      ]
+    },
+    {
+      "name": "Rubberist",
+      "links": [
+        {
+          "platform": "website",
+          "url": "https://www.rubberist.net"
         }
       ]
     }

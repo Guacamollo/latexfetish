@@ -1,11 +1,155 @@
 {
   "resources": [
     {
+      "name": "Atomage magazine appreciation site",
+      "country": "uk",
+      "links": [
+        {
+          "platform": "website",
+          "url": "https://atomage.co.uk"
+        }
+      ]
+    },
+    {
+      "name": "Doll's Realm",
+      "links": [
+        {
+          "platform": "website",
+          "url": "http://dollsrealm.blogspot.com"
+        }
+      ]
+    },
+    {
+      "name": "Fetish Map",
+      "country": "uk",
+      "links": [
+        {
+          "platform": "website",
+          "url": "http://www.fetishmap.co.uk"
+        }
+      ]
+    },
+    {
+      "name": "Fetish-Style.info",
+      "links": [
+        {
+          "platform": "website",
+          "url": "http://www.fetish-style.info"
+        }
+      ]
+    },
+    {
+      "name": "Kinky Berlin E.V.",
+      "country": "de",
+      "links": [
+        {
+          "platform": "website",
+          "url": "https://kinky-berlin.info"
+        }
+      ]
+    },
+    {
+      "name": "Latex 24/7",
+      "country": "uk",
+      "links": [
+        {
+          "platform": "website",
+          "url": "https://www.latex247.co.uk"
+        },
+        {
+          "platform": "discord",
+          "url": "https://www.latex247.co.uk/discord"
+        },
+        {
+          "platform": "facebook",
+          "url": "https://www.facebook.com/latex247"
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/latex247"
+        },
+        {
+          "platform": "patreon",
+          "url": "https://patreon.com/latex247"
+        },
+        {
+          "platform": "pinterest",
+          "url": "https://www.pinterest.com/latex247"
+        },
+        {
+          "platform": "reddit",
+          "url": "https://www.reddit.com/r/Latex247"
+        },
+        {
+          "platform": "spotify",
+          "url": "https://open.spotify.com/show/0DpFao0Cbfwp2KvL0cSJsN"
+        },
+        {
+          "platform": "tiktok",
+          "url": "https://tiktok.com/@latex247"
+        },
+        {
+          "platform": "twitch",
+          "url": "http://www.twitch.com/latex247"
+        },
+        {
+          "platform": "x",
+          "url": "https://x.com/latex247"
+        },
+        {
+          "platform": "youtube",
+          "url": "https://www.youtube.com/latex247"
+        }
+      ]
+    },
+    {
+      "name": "Latex Kultur",
+      "links": [
+        {
+          "platform": "website",
+          "url": "https://latexkultur.de"
+        }
+      ]
+    },
+    {
       "name": "Latex Wiki",
       "links": [
         {
           "platform": "website",
-          "url": "https://latexwiki.com/index.php?title=Main_Page"
+          "url": "https://www.latexwiki.com"
+        }
+      ]
+    },
+    {
+      "name": "Lust Love Latex",
+      "links": [
+        {
+          "platform": "website",
+          "url": "https://lustlovelatex.com"
+        },
+        {
+          "platform": "facebook",
+          "url": "https://www.facebook.com/lustlovelatex"
+        },
+        {
+          "platform": "feeds2",
+          "url": "http://feeds2.feedburner.com/lustlovelatex"
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/lustlovelatex"
+        },
+        {
+          "platform": "pinterest",
+          "url": "https://www.pinterest.com/latexfetish"
+        },
+        {
+          "platform": "x",
+          "url": "https://x.com/3xl"
+        },
+        {
+          "platform": "youtube",
+          "url": "https://www.youtube.com/user/threexl"
         }
       ]
     },
@@ -19,6 +163,33 @@
       ]
     },
     {
+      "name": "Rainwear Passion",
+      "links": [
+        {
+          "platform": "website",
+          "url": "https://rainwearpassion.com"
+        }
+      ]
+    },
+    {
+      "name": "Rubber Canuck",
+      "links": [
+        {
+          "platform": "website",
+          "url": "http://rubbercanuck.blogspot.com"
+        }
+      ]
+    },
+    {
+      "name": "Rubber Guru",
+      "links": [
+        {
+          "platform": "website",
+          "url": "http://rubberguru.com"
+        }
+      ]
+    },
+    {
       "name": "WearLatex",
       "links": [
         {
@@ -27,8 +198,28 @@
         },
         {
           "platform": "website",
+          "url": "https://www.latexvideos.com"
+        },
+        {
+          "platform": "website",
           "url": "https://www.wearlatex.com/category/vendors",
           "label": "Vendor A-Z"
+        },
+        {
+          "platform": "facebook",
+          "url": "https://www.facebook.com/wearlatexclothing"
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/wearlatex"
+        },
+        {
+          "platform": "x",
+          "url": "https://x.com/wearlatex"
+        },
+        {
+          "platform": "youtube",
+          "url": "https://www.youtube.com/@wearlatex"
         }
       ]
     }

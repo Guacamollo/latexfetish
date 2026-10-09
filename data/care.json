@@ -6,7 +6,24 @@
       "links": [
         {
           "platform": "website",
-          "url": "https://www.begloss.com"
+          "url": "https://www.begloss.com",
+          "note": "Storefinder - https://www.begloss.com/en/pages/storefinder"
+        },
+        {
+          "platform": "facebook",
+          "url": "https://www.facebook.com/begloss.shop"
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/begloss"
+        },
+        {
+          "platform": "x",
+          "url": "https://x.com/beGLOSS"
+        },
+        {
+          "platform": "youtube",
+          "url": "https://www.youtube.com/begloss"
         }
       ]
     },
@@ -17,6 +34,23 @@
         {
           "platform": "website",
           "url": "https://www.vivishine.com"
+        },
+        {
+          "platform": "facebook",
+          "url": "https://www.facebook.com/Vivishine.Latexcare"
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/vivishine.company",
+          "note": "broken"
+        },
+        {
+          "platform": "x",
+          "url": "https://x.com/vivishinelatex"
+        },
+        {
+          "platform": "youtube",
+          "url": "https://www.youtube.com/channel/UC3drSIUQL6gTHDYKray582A/featured"
         }
       ]
     }
