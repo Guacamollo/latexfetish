@@ -109,7 +109,6 @@ COUNTRIES = {
     "ru": "Russia",
     "se": "Sweden",
     "ua": "Ukraine",
-    "uk": "United Kingdom",
     "us": "United States of America",
     "za": "South Africa",
 }
