@@ -6,8 +6,12 @@
       "links": [
         {
           "platform": "website",
-          "url": "https://www.begloss.com",
-          "note": "Storefinder - https://www.begloss.com/en/pages/storefinder"
+          "url": "https://www.begloss.com"
+        },
+        {
+          "platform": "website",
+          "url": "https://www.begloss.com/en/pages/storefinder",
+          "label": "Storefinder"
         },
         {
           "platform": "facebook",
@@ -42,7 +46,7 @@
         {
           "platform": "instagram",
           "url": "https://www.instagram.com/vivishine.company",
-          "note": "broken"
+          "label": "Broken"
         },
         {
           "platform": "x",

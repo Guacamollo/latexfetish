@@ -21,9 +21,11 @@ Missing files print a warning to stderr but don't stop the build.
 """
 
 import argparse
+import io
 import json
 import re
 import sys
+from collections import Counter
 from pathlib import Path
 
 # --- Configuration -----------------------------------------------------------
@@ -112,6 +114,12 @@ COUNTRIES = {
     "us": "United States of America",
     "za": "South Africa",
 }
+
+# Table layout: the most-used platforms of a page get their own column,
+# all other and labeled links go into a "More" column.
+MAX_PLATFORM_COLUMNS = 4
+MIN_COLUMN_SHARE = 0.25  # share of entries a platform needs for a column
+MIN_COLUMN_ENTRIES = 2   # ...but at least this many entries
 
 GENDERS = ("female", "male", "Non-binary", "other")
 ENTRY_KEYS = {"name", "country", "countries", "gender", "former_name", "type", "note", "links"}
@@ -225,34 +233,86 @@ def render_flag(country):
             f'alt="{country.upper()}" title="{COUNTRIES[country]}">')
 
 
-def render_entry(entry):
+def column_platforms(entries):
+    """Pick the platforms that get their own column: website first, then by usage."""
+    counts = Counter()
+    for entry in entries:
+        counts.update({lk["platform"] for lk in entry["links"] if not lk.get("label")})
+    minimum = max(MIN_COLUMN_ENTRIES, len(entries) * MIN_COLUMN_SHARE)
+    popular = [p for p, n in counts.items() if n >= minimum]
+    popular.sort(key=lambda p: (p != "website", -counts[p], p))
+    return popular[:MAX_PLATFORM_COLUMNS]
+
+
+def split_links(links, columns):
+    """Return ({platform: link} for the column cells, remaining links for "More").
+
+    A column holds the first unlabeled link of its platform. Everything else
+    goes to "More", unlabeled links before labeled ones.
+    """
+    cells, more = {}, []
+    for link in sort_links(links):
+        platform = link["platform"]
+        if platform in columns and platform not in cells and not link.get("label"):
+            cells[platform] = link
+        else:
+            more.append(link)
+    more.sort(key=lambda lk: bool(lk.get("label")))
+    return cells, more
+
+
+def escape_cell(text):
+    return text.replace("|", "\\|")
+
+
+def render_name(entry):
     name = f'**{entry["name"]}**'
     if entry.get("former_name"):
         name += f' *(formerly {entry["former_name"]})*'
     if entry.get("type"):
         name += f' *({entry["type"]})*'
-    flags = " ".join(render_flag(c) for c in entry_countries(entry))
-    links = " ".join(render_link(lk) for lk in sort_links(entry["links"]))
-    line = "- " + " ".join(part for part in (flags, name, links) if part)
+    return name
+
+
+def render_more(entry, more):
+    text = " ".join(render_link(lk) for lk in more)
     if entry.get("note"):
-        line += f' - *{entry["note"]}*'
-    return line
+        text = " - ".join(part for part in (text, f'*{entry["note"]}*') if part)
+    return text
 
 
-def render_list(entries):
-    return "\n".join(render_entry(e) for e in sort_entries(entries))
+def render_row(entry, columns, with_more):
+    cells, more = split_links(entry["links"], columns)
+    row = [" ".join(render_flag(c) for c in entry_countries(entry)), render_name(entry)]
+    row += [render_link(cells[p]) if p in cells else "" for p in columns]
+    if with_more:
+        row.append(render_more(entry, more))
+    return "| " + " | ".join(escape_cell(cell) for cell in row) + " |"
+
+
+def render_table(entries, columns, with_more):
+    header = ["", "Name"] + [PLATFORMS[p] for p in columns] + (["More"] if with_more else [])
+    align = ["-", "-"] + [":-:"] * len(columns) + (["-"] if with_more else [])
+    lines = ["| " + " | ".join(header) + " |", "| " + " | ".join(align) + " |"]
+    lines += [render_row(e, columns, with_more) for e in sort_entries(entries)]
+    return "\n".join(lines)
 
 
 def render_page(entries, title):
-    """Render the full page: heading, then the list (grouped by gender if used)."""
+    """Render the full page: heading, then the table (one per gender if used).
+
+    Columns are chosen from the whole page, so gender tables share them.
+    """
+    columns = column_platforms(entries)
+    with_more = any(e.get("note") or split_links(e["links"], columns)[1] for e in entries)
     parts = [f"# {title}"]
     if any(e.get("gender") for e in entries):
         for gender in GENDERS:
             group = [e for e in entries if e.get("gender", "other") == gender]
             if group:
-                parts += ["", f"## {gender.title()}", "", render_list(group)]
+                parts += ["", f"## {gender.title()}", "", render_table(group, columns, with_more)]
     else:
-        parts += ["", render_list(entries)]
+        parts += ["", render_table(entries, columns, with_more)]
     return "\n".join(parts)
 
 # --- Validation --------------------------------------------------------------
@@ -381,7 +441,7 @@ def main(argv=None):
 
     # Redirected stdout on Windows defaults to legacy code page.
     # Force UTF-8
-    if hasattr(sys.stdout, "reconfigure"):
+    if isinstance(sys.stdout, io.TextIOWrapper):
         sys.stdout.reconfigure(encoding="utf-8")
 
     json_path = Path(args.json_path).resolve()

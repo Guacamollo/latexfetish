@@ -18,9 +18,9 @@ from pathlib import Path
 from urllib.parse import urljoin, urlparse
 
 import tldextract
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, Tag
 from curl_cffi import requests
-from PIL import Image
+from PIL import IcoImagePlugin, Image
 
 IMPERSONATE = "chrome"
 
@@ -55,6 +55,14 @@ def _clean_filename(netloc: str) -> str:
     return extracted.domain or host
 
 
+def _attr(tag: Tag, name: str) -> str:
+    """Return an attribute as a string; multi-valued attributes are space-joined."""
+    value = tag.get(name)
+    if value is None:
+        return ""
+    return value if isinstance(value, str) else " ".join(value)
+
+
 def find_icon_candidates(page_url: str) -> list[str]:
     """Return absolute icon URLs found in page, best first."""
     try:
@@ -75,20 +83,20 @@ def find_icon_candidates(page_url: str) -> list[str]:
 
     scored = []
     for link in soup.find_all("link", rel=True):
-        rels = {r.lower() for r in link.get("rel", [])}
+        rels = {r.lower() for r in link.get_attribute_list("rel")}
         if rels.isdisjoint(ICON_RELS):
             continue
-        href = link.get("href")
+        href = _attr(link, "href")
         if not href or href.startswith("data:"):
             continue
         absolute = urljoin(final_url, href)
 
         # Prefer SVGs
-        link_type = (link.get("type") or "").lower()
+        link_type = _attr(link, "type").lower()
         path = absolute.lower().split("?", 1)[0]
         is_svg = link_type == "image/svg+xml" or path.endswith(".svg")
 
-        size = _parse_size(link.get("sizes"))
+        size = _parse_size(_attr(link, "sizes"))
         # Filter out mask-icon
         if is_svg and "mask-icon" not in rels:
             size = max(size, 10_000)
@@ -110,7 +118,7 @@ def _is_svg(content: bytes) -> bool:
 def _to_png(content: bytes) -> bytes:
     """Decode any raster image and re-encode as PNG"""
     img = Image.open(io.BytesIO(content))
-    if img.format == "ICO" and hasattr(img, "ico"):
+    if isinstance(img, IcoImagePlugin.IcoImageFile):
         sizes = img.ico.sizes()
         if sizes:
             largest = max(sizes, key=lambda s: s[0] * s[1])

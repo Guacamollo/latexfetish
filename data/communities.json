@@ -6,13 +6,13 @@
       "links": [
         {
           "platform": "website",
-          "url": "http://darkside.se",
-          "note": "Old"
+          "url": "https://diversia.social",
+          "label": "New"
         },
         {
           "platform": "website",
-          "url": "https://diversia.social",
-          "note": "New"
+          "url": "http://darkside.se",
+          "label": "Old"
         }
       ]
     },
